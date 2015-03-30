@@ -1,3 +1,4 @@
+sudo: false
 language: perl
 perl:
   - "5.12"
@@ -5,4 +6,14 @@ perl:
   - "5.16"
   - "5.18"
   - "5.20"
-
+cache:
+  directories:
+    - local
+before_install:
+  - make -f ci.mk prepare
+install:
+  - make -f ci.mk deps
+script:
+  - make -f ci.mk test
+after_success:
+  - make -f ci.mk coveralls
