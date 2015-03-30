@@ -57,3 +57,53 @@ subtype 'Right',
   );
 
 1;
+
+__END__
+
+=encoding utf-8
+
+=head1 NAME
+
+MouseX::Types::Data::Monad::Either - Type constraints for Data::Monad::Either
+
+=head1 SYNOPSIS
+
+    use Data::Monad::Either qw( right left );
+    use MouseX::Types::Data::Monad::Either;
+    use Smart::Args qw( args );
+
+    sub from_api {
+      args my $json => 'Either[Left[Str] | Right[Int]]';
+      $json->flat_map(sub {
+        # ...
+      });
+    }
+
+    from_api(right(1));
+    from_api(left('some error'));
+
+=head1 DESCRIPTION
+
+MouseX::Types::Data::Monad::Either defines a type constraint for Data::Monad::Either.
+
+C<Either> type requires a union type that consists of C<Left> and C<Right> types.
+
+The reason for this strange requirement is that L<Mouse::Meta::TypeConstraint> cannot have multiple type parameters.
+
+=head1 SEE ALSO
+
+L<Mouse>, L<Data::Monad::Either>
+
+=head1 LICENSE
+
+Copyright (C) aereal.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+aereal E<lt>aereal@aereal.orgE<gt>
+
+=cut
+
