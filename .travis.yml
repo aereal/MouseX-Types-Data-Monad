@@ -6,4 +6,9 @@ perl:
   - "5.16"
   - "5.18"
   - "5.20"
-
+before_install:
+  - make -f ci.mk prepare
+install:
+  - make -f ci.mk deps
+script:
+  - make -f ci.mk test
