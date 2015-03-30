@@ -1,0 +1,9 @@
+--verbose
+--lib
+--color
+--count
+--failures
+--comments
+--merge
+--recurse
+--timer
