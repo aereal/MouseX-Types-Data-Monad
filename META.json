@@ -42,16 +42,31 @@
       },
       "runtime" : {
          "requires" : {
+            "Data::Monad" : "0",
+            "Mouse" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
+            "Devel::Cover" : "0",
+            "Devel::Cover::Report::Coveralls" : "0",
             "Test::More" : "0.98"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/aereal/MouseX-Types-Data-Monad/issues"
+      },
+      "homepage" : "https://github.com/aereal/MouseX-Types-Data-Monad",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/aereal/MouseX-Types-Data-Monad.git",
+         "web" : "https://github.com/aereal/MouseX-Types-Data-Monad"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:AEREAL"
 }

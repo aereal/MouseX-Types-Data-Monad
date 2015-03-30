@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/aereal/MouseX-Types-Data-Monad.svg?branch=master)](https://travis-ci.org/aereal/MouseX-Types-Data-Monad) [![Coverage Status](https://img.shields.io/coveralls/aereal/MouseX-Types-Data-Monad/master.svg)](https://coveralls.io/r/aereal/MouseX-Types-Data-Monad?branch=master)
 # NAME
 
 MouseX::Types::Data::Monad - It's new $module
