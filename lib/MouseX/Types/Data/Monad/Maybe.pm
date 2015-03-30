@@ -6,7 +6,7 @@ use warnings;
 use Mouse::Util::TypeConstraints;
 
 subtype 'MaybeM', # `Maybe` is already defined by Mouse
-  as 'Object',
+  as 'Data::Monad::Maybe',
   (
     constraint_generator => sub {
       my ($type_parameter) = @_;

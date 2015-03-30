@@ -25,4 +25,9 @@ subtest 'nothing' => sub {
   ok $maybe_object_t->check(nothing);
 };
 
+subtest 'something not maybe' => sub {
+  my $x = bless {}, 'x';
+  ok ! $maybe_t->check($x);
+};
+
 done_testing;
